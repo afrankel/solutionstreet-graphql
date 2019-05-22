@@ -636,18 +636,12 @@ type Mutation {
   updateCustomer(data: CustomerUpdateInput!, where: CustomerWhereUniqueInput!): Customer
   updateAccount(data: AccountUpdateInput!, where: AccountWhereUniqueInput!): Account
   updateTransaction(data: TransactionUpdateInput!, where: TransactionWhereUniqueInput!): Transaction
-  deleteCustomer(where: CustomerWhereUniqueInput!): Customer
-  deleteAccount(where: AccountWhereUniqueInput!): Account
-  deleteTransaction(where: TransactionWhereUniqueInput!): Transaction
   upsertCustomer(where: CustomerWhereUniqueInput!, create: CustomerCreateInput!, update: CustomerUpdateInput!): Customer!
   upsertAccount(where: AccountWhereUniqueInput!, create: AccountCreateInput!, update: AccountUpdateInput!): Account!
   upsertTransaction(where: TransactionWhereUniqueInput!, create: TransactionCreateInput!, update: TransactionUpdateInput!): Transaction!
   updateManyCustomers(data: CustomerUpdateInput!, where: CustomerWhereInput): BatchPayload!
   updateManyAccounts(data: AccountUpdateInput!, where: AccountWhereInput): BatchPayload!
   updateManyTransactions(data: TransactionUpdateInput!, where: TransactionWhereInput): BatchPayload!
-  deleteManyCustomers(where: CustomerWhereInput): BatchPayload!
-  deleteManyAccounts(where: AccountWhereInput): BatchPayload!
-  deleteManyTransactions(where: TransactionWhereInput): BatchPayload!
 }
 
 enum MutationType {
