@@ -1,0 +1,23 @@
+type Customer {
+  id: ID! @id
+  firstName: String!
+  lastName: String!
+  email: String! @unique
+  accounts: [Account!]! @relation(name: "CustomerToAccount", onDelete: CASCADE)
+}
+
+type Account {
+  id: ID! @id
+  name: String!
+  balance: Float!
+  owners: [Customer!]! @relation(name: "CustomerToAccount", onDelete: CASCADE)
+  transactions: [Transaction!]! @relation(name: "AccountToTransaction", onDelete: CASCADE)
+}
+
+type Transaction {
+  id: ID! @id
+  date: DateTime!
+  amount: Float!
+  cleared: Boolean @default(value: false)
+  account: Account! @relation(name: "AccountToTransaction", onDelete: SET_NULL)
+}
