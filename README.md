@@ -1,7 +1,7 @@
 # solutionstreet-graphql
 A quick demo of using graphql and prisma by defining a simple business example of object relations
 
-A graphql server using graphql-yoga and Prisma (ORM).
+A graphql server using graphql-yoga and Prisma (ORM).  Here is the server running on Heroku:  https://afternoon-island-18488.herokuapp.com/
 
 The code is related to this blog article:  https://www.solutionstreet.com/blog/you-really-should-be-using-graphql
 
